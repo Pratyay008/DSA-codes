@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    // at 4th position
+    // at 4th position  /////////not completed
     int arr[8]={1,4,3,6,8,5,8,7};
     int temp;
     for (int i = 3; i < 8; i++)
