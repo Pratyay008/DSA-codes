@@ -1,19 +1,20 @@
 #include<stdio.h>
-int stack[100], top, n, x, i, choice;
+#include<stdlib.h>
+#define maxsize 5
+int stack[5], top;
 void push();
 void pop();
 void display();
-void exit();
 
 int main()
-{
+{   
+    printf("--------------Stack using array-------------\n");
     top=-1;
-    printf("Enter the size of stack :\n");
-    scanf("%d", &n);
     printf("Choose the operation :\n");
-    printf("1.PUSH   2.POP   3.DISPLAY   4.EXIT\n");
     while (1)
     {
+        int choice;
+        printf("1.PUSH   2.POP   3.DISPLAY   4.EXIT\n");
         printf("Enter the choice :\n");
         scanf("%d", &choice);
         switch(choice)
@@ -51,17 +52,17 @@ int main()
 
 
 void push()
-{
-    if (top==n-1)
+{   int element;
+    if (top==maxsize-1)
     {
         printf("Stack is overflow/full\n");        
     }
     else
     {
         printf("Enter the element to be pushed : \n");
-        scanf("%d", &x);
+        scanf("%d", &element);
         top++;
-        stack[top]=x;
+        stack[top]=element;
 
     }
     
@@ -83,6 +84,7 @@ void pop()
 
 void display()
 {
+    int i;
     if (top >-1)
     {
         printf("The elements in Stack are : \n");   
@@ -90,14 +92,12 @@ void display()
         {
            printf("%d\n", stack[i]);
         }
-        printf("Next choice : \n");   
-         
-
     }
     else
     {
         printf("Stack is empty\n");
     }
+        printf("Next choice : \n");   
     
 }
 
