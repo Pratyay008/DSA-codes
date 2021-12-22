@@ -10,7 +10,6 @@ int main()
     {
         printf("Enter the element : ");
         scanf("%d", &x);
-            
         
         for (int i = n-1; i <= 8; i++)
         {
@@ -30,13 +29,6 @@ int main()
     {
         printf("Wrong position\n");
     }
-    
-       
- 
-
-
-
-    
     return 0;
 }
 
