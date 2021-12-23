@@ -11,7 +11,7 @@ int main()
         printf("Enter the element : ");
         scanf("%d", &x);
         
-        for (int i = n-1; i <= 8; i++)
+        for (int i = n-1; i < 9; i++)
         {
             temp = arr[i];
             arr[i] = x;
